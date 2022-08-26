@@ -49,7 +49,23 @@ export const update = async (req: Request, res: Response) => {
     await movieRepository.save(movieId);
 
     await movieRepository.update(Number(id), req.body);
-    return res.status(200).json({message: "movie updated!"});
+    return res.status(200).json({ message: 'movie updated!' });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ message: 'Internal Server Error' });
+  }
+};
+export const deleteMovie = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  try {
+    const movieId = await movieRepository.findOne({
+      where: { id: Number(id) },
+    });
+    if (!movieId) return res.status(404).json({ message: 'movie not found.' });
+    await movieRepository.save(movieId);
+
+    await movieRepository.delete(movieId);
+    return res.status(204).json({ message: 'movie deleted!' });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ message: 'Internal Server Error' });
