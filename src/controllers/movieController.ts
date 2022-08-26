@@ -25,3 +25,15 @@ export const listAll = async (req: Request, res: Response) => {
     return res.status(500).json({ message: 'Internal Server Error' });
   }
 }
+export const listById = async (req: Request, res: Response) => {
+  const {id} = req.params
+  try {
+    const movieId = await movieRepository.findOne({where: {id: Number(id)}})
+    if(!movieId) return res.status(404).json({message: "movie not found."})
+    await movieRepository.save(movieId)
+    return res.status(200).json(movieId)
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ message: 'Internal Server Error' });
+  }
+}
