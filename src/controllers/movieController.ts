@@ -14,3 +14,14 @@ export const create = async (req: Request, res: Response) => {
     return res.status(500).json({ message: 'Internal Server Error' });
   }
 };
+
+export const listAll = async (req: Request, res: Response) => {
+  try {
+    const movies = await movieRepository.find()
+    await movieRepository.save(movies)
+    return res.status(200).json(movies)
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ message: 'Internal Server Error' });
+  }
+}

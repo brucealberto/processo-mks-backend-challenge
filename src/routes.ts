@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { create } from "./controllers/movieController";
+import { create, listAll } from "./controllers/movieController";
 
 const routes = Router()
 
 routes.post('/movies', create)
+routes.get('/movies', listAll)
 
 export default routes
