@@ -26,6 +26,6 @@
  Observação : o banco está vazio, insira dados utilizando a rota post do backend.
 
 ### Implementações futuras.
-> Gerar token para as autenticações.
-> Finalizar os testes.
-> Obs: Trabalhei com as tecnologias que me senti seguro.
+>Gerar token para as autenticações.
+>Finalizar os testes.
+>Obs: Trabalhei com as tecnologias que me senti seguro.
