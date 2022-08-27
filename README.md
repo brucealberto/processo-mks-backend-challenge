@@ -27,5 +27,5 @@
 
 ### Implementações futuras.
 >Gerar token para as autenticações.
->Finalizar os testes.
->Obs: Trabalhei com as tecnologias que me senti seguro.
+- Finalizar os testes.
+- Obs: Trabalhei com as tecnologias que me senti seguro.
