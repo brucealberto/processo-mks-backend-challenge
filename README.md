@@ -1,10 +1,6 @@
-# processo-mks-backend-challenge
+# Seja bem vindo ao processo-mks-backend-challenge!.
 
-# Seja bem vindo ao projeto blitz de carreira!.
-
-### Este projeto tem como finalidade simular um desáfio técnico real, para uma entrevista de emprego!.
-
-#### Neste projeto o que será feito é uma `to-do-list`, utilizando tanto o *Backend* quanto o *Frontend* !.
+### Este projeto tem como finalidade construir uma CRUD de um catálogo de filmes.
 
 ### Técnologias utilizadas.
 
